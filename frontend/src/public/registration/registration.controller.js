@@ -4,11 +4,20 @@
   angular.module('public')
     .controller('RegistrationController', RegistrationController);
 
-  RegistrationController.$inject = ['$scope'];
+  RegistrationController.$inject = ['UserService', '$scope'];
 
-  function RegistrationController($scope) {
+  function RegistrationController(UserService, $scope) {
     var $ctrl = this;
 
-    $ctrl.submit = function(user) {}
+    $ctrl.submit = function(user) {
+      UserService.registerUser(user)
+        .then(function(response) {
+          if (response.success) {
+            console.log('Registration success');
+          } else {
+            console.log('error ', response.message);
+          }
+        });
+    }
   }
 })()
