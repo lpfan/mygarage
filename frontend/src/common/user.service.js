@@ -10,8 +10,8 @@
 
     service.registerUser = function(userData) {
       return $http.post('/api/users', userData).then(function(response) {
-        return response.data
+        return response.data;
       });
-    }
+    };
   }
-})()
+})();
