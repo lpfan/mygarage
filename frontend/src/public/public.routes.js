@@ -16,5 +16,9 @@
         url: '/',
         templateUrl: 'src/public/home/home.html'
       })
+      .state('public.registration', {
+        url: '/registration',
+        templateUrl: 'src/public/registration/registration.html'
+      })
   }
 })()
