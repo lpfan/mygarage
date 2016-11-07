@@ -18,7 +18,9 @@
       })
       .state('public.registration', {
         url: '/registration',
-        templateUrl: 'src/public/registration/registration.html'
+        templateUrl: 'src/public/registration/registration.html',
+        controller: 'RegistrationController',
+        controllerAs: 'registerCtrl'
       })
   }
 })()
