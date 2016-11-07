@@ -4,7 +4,11 @@
   angular.module('public')
     .controller('RegistrationController', RegistrationController);
 
-  function RegistrationController() {
+  RegistrationController.$inject = ['$scope'];
+
+  function RegistrationController($scope) {
     var $ctrl = this;
+
+    $ctrl.submit = function(user) {}
   }
 })()
