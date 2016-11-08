@@ -4,9 +4,9 @@
   angular.module('public')
     .controller('RegistrationController', RegistrationController);
 
-  RegistrationController.$inject = ['UserService', '$scope'];
+  RegistrationController.$inject = ['UserService'];
 
-  function RegistrationController(UserService, $scope) {
+  function RegistrationController(UserService) {
     var $ctrl = this;
 
     $ctrl.submit = function(user) {

@@ -40,6 +40,6 @@ describe('Users Service', function() {
         expect(response.message).toEqual('Username and email are required');
       });
       $httpBackendMock.flush();
-    })
+    });
   });
 });
